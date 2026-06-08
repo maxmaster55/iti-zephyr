@@ -1,0 +1,4 @@
+name: say_hi
+build:
+  cmake: .
+  kconfig: Kconfig

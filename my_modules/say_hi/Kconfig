@@ -1,0 +1,7 @@
+config SAY_HI
+    bool "enable say_hi lib"
+    default y
+    depends on PRINTK
+    help
+      this is a lib with only one function called sayhi()
+      that just says hi

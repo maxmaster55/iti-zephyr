@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <zephyr/drivers/gpio.h>
 #include <zephyr/kernel.h>
+#include <say_hi.h>
 
 #define PRI (7)
 #define SLEEP_TIME_MS_0 1000
@@ -34,6 +35,7 @@ int main(void) {
     return 0;
   }
   printk("GPIO ready!\n");
+  say_hi();
 
   k_thread_create(&led0_handler, thread1_stack, STACK_SIZE, thread0, NULL, NULL,
                   NULL, PRI, 0, K_NO_WAIT);
